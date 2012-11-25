@@ -19,6 +19,13 @@ function club_committee_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function club_committee_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function club_committee_node_info() {
