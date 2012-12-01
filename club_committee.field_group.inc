@@ -13,53 +13,18 @@ function club_committee_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_clubinfo|user|user|form';
-  $field_group->group_name = 'group_clubinfo';
+  $field_group->identifier = 'group_committee|user|user|form';
+  $field_group->group_name = 'group_committee';
   $field_group->entity_type = 'user';
   $field_group->bundle = 'user';
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Club Information',
+    'label' => 'Committee Participation',
     'weight' => '6',
-    'children' => array(
-      0 => 'field_chapter',
-      1 => 'field_classification',
-      2 => 'field_status',
-      3 => 'field_member_id',
-      4 => 'field_sponsor',
-      5 => 'group_participation',
-    ),
-    'format_type' => 'fieldset',
-    'format_settings' => array(
-      'formatter' => 'collapsible',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $export['group_clubinfo|user|user|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_participation|user|user|form';
-  $field_group->group_name = 'group_participation';
-  $field_group->entity_type = 'user';
-  $field_group->bundle = 'user';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_clubinfo';
-  $field_group->data = array(
-    'label' => 'Participation',
-    'weight' => '5',
     'children' => array(
       0 => 'field_committee_chair',
       1 => 'field_committee_members',
-      2 => 'field_project_chair',
-      3 => 'field_project_member',
-      4 => 'field_officer',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -71,7 +36,7 @@ function club_committee_field_group_info() {
       ),
     ),
   );
-  $export['group_participation|user|user|form'] = $field_group;
+  $export['group_committee|user|user|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */

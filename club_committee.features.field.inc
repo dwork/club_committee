@@ -1052,8 +1052,8 @@ function club_committee_field_default_fields() {
           'sort' => array(
             'direction' => 'ASC',
             'field' => 'field_date:value',
-            'property' => 'nid',
-            'type' => 'none',
+            'property' => 'title',
+            'type' => 'property',
           ),
           'target_bundles' => array(
             'committees' => 'committees',
@@ -1070,7 +1070,7 @@ function club_committee_field_default_fields() {
       'bundle' => 'user',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Select any or all existing committees if this member is the committee chair or co-chair',
+      'description' => 'Select one or more committees for which this user is the "chair"',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1079,7 +1079,7 @@ function club_committee_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 20,
+          'weight' => 25,
         ),
       ),
       'entity_type' => 'user',
@@ -1133,8 +1133,8 @@ function club_committee_field_default_fields() {
           'sort' => array(
             'direction' => 'ASC',
             'field' => 'field_date:value',
-            'property' => 'nid',
-            'type' => 'none',
+            'property' => 'title',
+            'type' => 'property',
           ),
           'target_bundles' => array(
             'committees' => 'committees',
@@ -1151,7 +1151,7 @@ function club_committee_field_default_fields() {
       'bundle' => 'user',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Select any or all of the following committees if this member is a member of the committee (but not the chair)',
+      'description' => 'Select one or more committees of which this user is a "member" (but not the "chair")',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1160,12 +1160,12 @@ function club_committee_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 21,
+          'weight' => 26,
         ),
       ),
       'entity_type' => 'user',
       'field_name' => 'field_committee_members',
-      'label' => 'Committee Member',
+      'label' => 'Committee Members',
       'required' => 0,
       'settings' => array(
         'user_register_form' => 1,
@@ -1186,7 +1186,7 @@ function club_committee_field_default_fields() {
   t('Body');
   t('Club/Chapter');
   t('Committee Chair');
-  t('Committee Member');
+  t('Committee Members');
   t('Committee Type');
   t('Enter one or more websites for which this committee is responsible/\\');
   t('If the committee has a regular meeting place, enter/select it now.');
@@ -1194,8 +1194,8 @@ function club_committee_field_default_fields() {
   t('Phone Number');
   t('Private');
   t('Purpose');
-  t('Select any or all existing committees if this member is the committee chair or co-chair');
-  t('Select any or all of the following committees if this member is a member of the committee (but not the chair)');
+  t('Select one or more committees for which this user is the "chair"');
+  t('Select one or more committees of which this user is a "member" (but not the "chair")');
   t('Select the club/chapter this committee belongs to');
   t('Website');
   t('Youtube');
