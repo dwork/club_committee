@@ -789,7 +789,7 @@ return $name;';
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Contextual filter: Field: Chapter/Club (field_chapter) */
+  /* Contextual filter: Field: Club/Chapter (field_chapter) */
   $handler->display->display_options['arguments']['field_chapter_target_id']['id'] = 'field_chapter_target_id';
   $handler->display->display_options['arguments']['field_chapter_target_id']['table'] = 'field_data_field_chapter';
   $handler->display->display_options['arguments']['field_chapter_target_id']['field'] = 'field_chapter_target_id';
